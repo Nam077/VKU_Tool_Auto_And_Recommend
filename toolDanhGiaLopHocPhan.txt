@@ -1,5 +1,5 @@
 // Coding by Nam077 
-console.success("Tool tự đánh giá học phần siu cấp vjp pro chả cần làm gì");
+console.log("Tool tự đánh giá học phần siu cấp vjp pro chả cần làm gì");
 let level = "5";
 let doKhoMonHoc = "Khá ổn";
 let giaoTrinh = "Giáo trình đầy đủ";
