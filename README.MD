@@ -1,4 +1,4 @@
-# <b> Tool Đánh Giá Học Phần VKU
+# <b> Tool Đánh Giá Học Phần VKU Auto 100% chỉ việc copy rồi húp :v
 
 <div align="center">by Nam077</div>
 <hr></hr>
