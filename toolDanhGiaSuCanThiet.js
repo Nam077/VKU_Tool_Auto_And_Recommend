@@ -27,7 +27,7 @@ for (let i = 0; i < links.length; i++) {
     console.log(`Tiến trình ${i + 1}/${links.length}`);
     try {
         await update(ids[i], value);
-        console.success("Cập nhật thành công!");
+        console.log(`Tiến trình ${i + 1}/${links.length} thành công!`);
     } catch (error) {
         console.log("Cập nhật thất bại!");
     }
