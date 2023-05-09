@@ -1,5 +1,5 @@
 // Coding by Nam077 
-console.success("Tool tự đánh giá học phần siu cấp vjp pro chả cần làm gì");
+console.log("Tool tự đánh giá học phần siu cấp vjp pro chả cần làm gì");
 async function update(hocphan_id, value) {
     url = "/sv/cap-nhat-khao-sat-hoc-phan";
     await new Promise((resolve, reject) => {
@@ -29,6 +29,6 @@ for (let i = 0; i < links.length; i++) {
         await update(ids[i], value);
         console.log(`Tiến trình ${i + 1}/${links.length} thành công!`);
     } catch (error) {
-        console.log("Cập nhật thất bại!");
+        console.log(`Tiến trình ${i + 1}/${links.length} thất bại!`);
     }
 }
