@@ -97,6 +97,7 @@ async function getFormData() {
     tags.forEach(tag => links.push(tag.href));
 
     for (let i = 0; i < links.length; i++) {
+        console.log(`Tiến trình ${i + 1}/${links.length}`);
         await new Promise(resolve => {
             $.ajax({
                 type: "GET",
@@ -109,7 +110,6 @@ async function getFormData() {
                     const action = form.getAttribute('action');
                     const token = doc.querySelector('input[name="_token"]').value;
                     const idlop = doc.querySelector('#idlop').value; // use `doc` instead of `document`
-
                     try {
                         $.ajax({
                             type: "POST",
@@ -121,12 +121,12 @@ async function getFormData() {
                                 tuluan: tuLuan
                             },
                             success: function (data) {
-                                console.log("Thành công vui lòng đợi trong giây lát");
+                                console.log(`Học phần ${i + 1}/${links.length} thành công!`);
                                 resolve();
                             }
                         });
                     } catch (error) {
-                        console.log("Có lỗi xảy ra");
+                        console.error(`Học phần ${i + 1}/${links.length} thất bại!`);
                     }
                 }
             });
