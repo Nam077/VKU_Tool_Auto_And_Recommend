@@ -1,4 +1,4 @@
-# <b> Tool Đánh Giá Học Phần, Xem Điểm Sau Khi Cải Thiện, Gợi Ý Cải Thiện Học Phân
+# <b> Tool Đánh Giá Học Phần, Xem Điểm Sau Khi Cải Thiện, Gợi Ý Cải Thiện Học Phần
 
 <div align="center">by Nam077</div>
 <hr></hr>
