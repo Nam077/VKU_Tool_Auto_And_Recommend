@@ -14,6 +14,9 @@ for (let tr of elementScores) {
     // Remove unnecessary span tag in the "name" field
     let nameField = tdList[1] ? tdList[1].innerHTML : '';
     score.name = nameField.replace(/<[^>]+>/g, '').trim();
+    // xoá tất cả các ký tự đặc biệt
+    score.name = score.name.replace(/[!"#$%&'()*+,-./:;<=>?@[\]^_`{|}~]/g, '').trim();
+
     if (score.name === '') {
         continue;
     }
@@ -54,16 +57,15 @@ for (let tr of elementScores) {
     scoreAll.push(score);
 }
 let duplicate = {};
-scoreAll.forEach(score => {
+scoreAll.forEach((score) => {
     if (!duplicate[score.name]) {
         duplicate[score.name] = score;
-    }
-    else {
+    } else {
         if (score.scoreT10 > duplicate[score.name].scoreT10) {
             duplicate[score.name] = score;
         }
     }
-})
+});
 
 scoreAll = Object.values(duplicate);
 
@@ -89,37 +91,52 @@ let scoreClassify = {
         data: [],
     },
     AllTinChi: 0,
-    Gpa: 0,
-}
+    GPA: 0,
+};
 
-scoreAll.forEach(score => {
+scoreAll.forEach((score) => {
     if (score.scoreCh === 'A') {
         scoreClassify.A.data.push(score);
         scoreClassify.A.tinChi += score.countTC;
-    }
-    else if (score.scoreCh === 'B') {
+    } else if (score.scoreCh === 'B') {
         scoreClassify.B.data.push(score);
         scoreClassify.B.tinChi += score.countTC;
-    }
-    else if (score.scoreCh === 'C') {
+    } else if (score.scoreCh === 'C') {
         scoreClassify.C.data.push(score);
         scoreClassify.C.tinChi += score.countTC;
-    }
-    else if (score.scoreCh === 'D') {
+    } else if (score.scoreCh === 'D') {
         scoreClassify.D.data.push(score);
         scoreClassify.D.tinChi += score.countTC;
-    }
-    else if (score.scoreCh === 'F') {
+    } else if (score.scoreCh === 'F') {
         scoreClassify.F.data.push(score);
         scoreClassify.F.tinChi += score.countTC;
     }
-})
-scoreClassify.AllTinChi += scoreClassify.A.tinChi + scoreClassify.B.tinChi + scoreClassify.C.tinChi + scoreClassify.D.tinChi + scoreClassify.F.tinChi
-scoreClassify.Gpa = ((4 * scoreClassify.A.tinChi + 3 * scoreClassify.B.tinChi + 2 * scoreClassify.C.tinChi + 1 * scoreClassify.D.tinChi + scoreClassify.F.tinChi) / scoreClassify.AllTinChi)
+});
+scoreClassify.AllTinChi +=
+    scoreClassify.A.tinChi +
+    scoreClassify.B.tinChi +
+    scoreClassify.C.tinChi +
+    scoreClassify.D.tinChi +
+    scoreClassify.F.tinChi;
+scoreClassify.Gpa =
+    (4 * scoreClassify.A.tinChi +
+        3 * scoreClassify.B.tinChi +
+        2 * scoreClassify.C.tinChi +
+        1 * scoreClassify.D.tinChi +
+        scoreClassify.F.tinChi) /
+    scoreClassify.AllTinChi;
+let count = {
+    A: scoreClassify.A.tinChi,
+    B: scoreClassify.B.tinChi,
+    C: scoreClassify.C.tinChi,
+    D: scoreClassify.D.tinChi,
+    F: scoreClassify.F.tinChi,
+};
 let dataDownload = {
     scoreClassify,
-    scoreAll
-}
+    scoreAll,
+    count,
+};
 let json = JSON.stringify(dataDownload);
 
 const blob = new Blob([json], { type: 'application/json' });
@@ -134,3 +151,5 @@ link.click();
 
 URL.revokeObjectURL(url);
 link.remove();
+
+undefined;
