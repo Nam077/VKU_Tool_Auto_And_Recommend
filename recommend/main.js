@@ -22,17 +22,17 @@ const subjects = [
     {
         "name": "Tiếng Anh 1",
         "so_tin_chi": "3",
-        "tags": ["english"]
+        "tags": ["english", "ta"]
     },
     {
         "name": "Lập trình hướng đối tượng và Java cơ bản",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["java", "programming"]
     },
     {
         "name": "Đại số",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["logic"]
     },
     {
         "name": "Nguyên lý hệ điều hành",
@@ -42,32 +42,32 @@ const subjects = [
     {
         "name": "Công nghệ Web",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["web"]
     },
     {
         "name": "Đồ án cơ sở 1 - IT",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["web"]
     },
     {
         "name": "Vật lý",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["logic", "math"]
     },
     {
         "name": "Cấu trúc dữ liệu và giải thuật",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["programming", "C++"]
     },
     {
         "name": "Lập trình Java nâng cao",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["java", "programming"]
     },
     {
         "name": "Tiếng Anh chuyên ngành 2",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["tacn", "english"]
     },
     {
         "name": "Kiến trúc máy tính",
@@ -77,12 +77,12 @@ const subjects = [
     {
         "name": "Tiếng Anh 2",
         "so_tin_chi": "2",
-        "tags": ["english"]
+        "tags": ["english", "ta"]
     },
     {
         "name": "Đồ án cơ sở 2_IT",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["doan", "web"]
     },
     {
         "name": "Chuyên đề 1 (IT)",
@@ -92,7 +92,7 @@ const subjects = [
     {
         "name": "Tiếng Anh 3",
         "so_tin_chi": "2",
-        "tags": ["english"]
+        "tags": ["english", "ta"]
     },
     {
         "name": "Phân tích và thiết kế hệ thống",
@@ -112,7 +112,7 @@ const subjects = [
     {
         "name": "Toán rời rạc",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["logic", "math"]
     },
     {
         "name": "Hệ thống số",
@@ -207,7 +207,7 @@ const subjects = [
     {
         "name": "Trí tuệ nhân tạo",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["AI", "python"]
     },
     {
         "name": "Trình biên dịch",
@@ -222,22 +222,22 @@ const subjects = [
     {
         "name": "Đồ án cơ sở 5 IT",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["python", "AI"]
     },
     {
         "name": "Kiểm thử phần mềm",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["tester"]
     },
     {
         "name": "Xử lý ảnh",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["python"]
     },
     {
         "name": "Lập trình hệ thống",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["programming"]
     },
     {
         "name": "Phân tích và thiết kế giải thuật",
@@ -247,7 +247,7 @@ const subjects = [
     {
         "name": "Xử lý tín hiệu số",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["logic", "math"]
     },
     {
         "name": "Hình họa",
@@ -257,12 +257,12 @@ const subjects = [
     {
         "name": "Triết học Mác - Lênin",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["memorize"]
     },
     {
         "name": "Tư tưởng Hồ Chí Minh",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["memorize"]
     },
     {
         "name": "Pháp luật đại cương",
@@ -287,7 +287,7 @@ const subjects = [
     {
         "name": "Tương tác người - máy",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["design"]
 
     },
     {
@@ -311,13 +311,13 @@ const subjects = [
     {
         "name": "Xử lý ngôn ngữ tự nhiên",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["python"]
 
     },
     {
         "name": "Bảo mật và An toàn hệ thống thông tin",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["english", "logic"]
     },
     {
         "name": "Kỹ thuật truyền số liệu",
@@ -333,12 +333,12 @@ const subjects = [
     {
         "name": "Kinh tế chính trị Mác - Lênin",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["memorize"]
     },
     {
         "name": "Lịch sử Đảng Cộng sản Việt Nam",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["memorize"]
     },
     {
         "name": "Chuyên đề 6 IT",
@@ -353,25 +353,25 @@ const subjects = [
     {
         "name": "Hệ cơ sở dữ liệu phân tán",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["data"]
 
     },
     {
         "name": "Phân tích, thiết kế mạng",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["network"]
 
     },
     {
         "name": "Mạng không dây và di động",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["network"]
 
     },
     {
         "name": "Điện toán đám mây",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["data"]
 
     },
     {
@@ -383,19 +383,19 @@ const subjects = [
     {
         "name": "Thiết kế và lập trình tương tác",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["design"]
 
     },
     {
         "name": "Thiết kế đồ họa 3D",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["design"]
 
     },
     {
         "name": "Thị giác máy tính",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["python"]
 
     },
     {
@@ -413,18 +413,18 @@ const subjects = [
     {
         "name": "Chủ nghĩa xã hội khoa học",
         "so_tin_chi": "2",
-        "tags": ["default"]
+        "tags": ["memorize"]
     },
     {
         "name": "Thực tập tốt nghiệp (IT)",
         "so_tin_chi": "3",
-        "tags": ["default"]
+        "tags": ["intern"]
 
     },
     {
         "name": "Đồ án tốt nghiệp (IT)",
         "so_tin_chi": "10",
-        "tags": ["default"]
+        "tags": ["doan"]
     }
 ]
 
@@ -1266,21 +1266,26 @@ function recommend(subjects, hocphan) {
     let recommendHocPhan = [];
     for (let i = 0; i < hocphan.scoreAll.length; i++) {
         const subject = hocphan.scoreAll[i];
-        const tags_subject = findTagsByName(subject.name, subjects);
+        let tags_subject = findTagsByName(subject.name, subjects);
+        //sort by tags[tags_subject[j]].count
+        tags_subject = tags_subject.sort((a, b) => {
+          return tags[b].count - tags[a].count;
+        })
         let sumScoreCh = 0;
         let countSubject = 0;
+        let sum_difference = 0;
         for (let j = 0; j < tags_subject.length; j++) {
-            sumScoreCh += tags[tags_subject[j]].sum;
-            countSubject += tags[tags_subject[j]].count;
+            sumScoreCh = (tags[tags_subject[j]].sum);
+            countSubject = (tags[tags_subject[j]].count);
+            sum_difference += (sumScoreCh / countSubject - score[subject.scoreCh]) / Math.pow(2, j);
         }
-        const difference = sumScoreCh / countSubject - score[subject.scoreCh];
         
         recommendHocPhan.push({
             "name": subject.name,
             "sumScoreCh": subject.scoreCh,
             "countTch": subject.countTC,
             "tags": tags_subject,
-            "difference": difference
+            "difference": sum_difference
         })
     }
     // sort by difference
