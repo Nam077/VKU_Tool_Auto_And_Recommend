@@ -1,6 +1,6 @@
-# <b> Tool Đánh Giá Học Phần VKU Auto 100% chỉ việc copy rồi húp :v
+# <b> Tool Đánh Giá Học Phần, Xem Điểm Sau Khi Cải Thiện, Gợi Ý Cải Thiện Học Phần
 
-<div align="center">by Nam077</div>
+<!-- <div align="center">by Nam077, HaiZuka, G</div> -->
 <hr></hr>
 
 ## Hướng dẫn sử dụng
